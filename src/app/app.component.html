@@ -1,3 +1,1 @@
-<ap-photo url="http://1.bp.blogspot.com/_X9MOJdgUwXo/TBJn3yXBaWI/AAAAAAAAA9c/h_2kUiRGYy0/s1600/11051lobo.jpg" description="Lobo"></ap-photo>
-
-<ap-photo url="http://www.osmais.com/wallpapers/201301/leoa-wallpaper.jpg" description="leoa"></ap-photo>
+<ap-photo *ngFor="let photo of photos" [url]="photo.url" [description]="photo.description"></ap-photo>
