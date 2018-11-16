@@ -12,7 +12,7 @@ import { PhotosModule } from './photos/photos.module';
   ],
   imports: [
     BrowserModule,
-
+    PhotosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
