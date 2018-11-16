@@ -6,10 +6,13 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
 @NgModule({
 
     //Private
-    declarations: [ PhotoComponent, PhotoListComponent ],
+    declarations: [ 
+        PhotoComponent, 
+        PhotoListComponent 
+    ],
 
     //Public
-    exports: [ PhotoComponent ],
+    exports: [  ],
 
     //Dependencias
     imports: [ HttpClientModule ]
