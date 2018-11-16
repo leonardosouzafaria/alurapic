@@ -13,6 +13,8 @@ export class PhotoListComponent implements OnInit {
 
   photos: Photo[] = [];
 
+  filter = [];
+
   //Constructor ficará responsavel somente por injeções 
   constructor(private photoService: PhotoService, private activatedRoute: ActivatedRoute) { }
 
