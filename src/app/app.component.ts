@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PhotoService } from './photos/photo/photo.service';
+import { Photo } from './photos/photo/photo';
 
 
 @Component({
@@ -9,13 +10,16 @@ import { PhotoService } from './photos/photo/photo.service';
 })
 export class AppComponent {
 
-  photos: Object[] = [];
+  photos: Photo[] = [];
 
   constructor(photoService: PhotoService) {
 
     photoService
       .listFromUser('flavio')
-      .subscribe(photos => this.photos = photos);
+      .subscribe(photos => {
+        //console.log(photos[0].description);
+        this.photos = photos
+      });
 
   }
 }
