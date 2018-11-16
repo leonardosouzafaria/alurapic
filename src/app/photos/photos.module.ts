@@ -1,13 +1,17 @@
 import { NgModule } from "@angular/core";
 import { PhotoComponent } from "./photo/photo.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-    
+
     //Private
-    declarations: [PhotoComponent],
+    declarations: [ PhotoComponent ],
 
     //Public
-    exports: [PhotoComponent]
+    exports: [ PhotoComponent ],
+
+    //Dependencias
+    imports: [ HttpClientModule ]
 })
 
 export class PhotosModule { }
