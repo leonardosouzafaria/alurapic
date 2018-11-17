@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [ DarkenOnHoverDirective ],
-    imports: [ CommonModule ]
+    imports: [ CommonModule ],
+    exports: [ DarkenOnHoverDirective ]
 })
 export class DarkenOnHoverModule { }
