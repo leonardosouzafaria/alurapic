@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../photo/photo.service';
-import { Photo } from '../photo/photo';
 import { ActivatedRoute } from '@angular/router';
+
+import { Photo } from '../photo/photo';
 
 @Component({
   selector: 'app-photo-list',
@@ -16,19 +16,10 @@ export class PhotoListComponent implements OnInit {
   filter: string = '';
 
   //Constructor ficará responsavel somente por injeções 
-  constructor(private photoService: PhotoService, private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   //Fluxo de vída do componente
   ngOnInit(): void {
-
-    const userName = this.activatedRoute.snapshot.params.userName;
-
-    this.photoService
-      .listFromUser(userName)
-      .subscribe(photos => {
-        //console.log(photos[0].description);
-        this.photos = photos
-      });
-
+    this.photos = this.activatedRoute.snapshot.data.photos;
   }
 }
